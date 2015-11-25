@@ -1,0 +1,51 @@
+#### IMPORTANT: Based on inputs from here: http://www.jianfeice.com/pyspark-importerror-cannot-import-name-accumulators/
+## I commented the following line: from pyspark.accumulators import Accumulator   in context.py in pyspark subfolder in SPARK HOME
+
+ipython profile create pyspark
+# ipython locate
+for %i in (java.exe) do @echo.   %~$PATH:i   to find Path of prog
+## Use spark-submit instead of pyspark for running python codes
+
+Copy file to hadoop HDFS:
+
+hadoop fs -put /home/karthik/pyspark_eg/README.md ./micropost
+
+hdfs dfs -rm -r README.md
+
+## Karthik supergroup in .49:
+hadoop fs -ls
+
+hadoop fs -lsr
+
+## FIle-management:
+http://hortonworks.com/hadoop-tutorial/using-commandline-manage-files-hdfs/
+
+hadoop fs -mkdir micropost
+
+hadoop fs -ls /micropost
+
+# Get files:
+hadoop fs -get /micropost/README.md
+
+hadoop fs -help
+
+## Sample code " hello world"
+
+from pyspark import SparkContext
+logFile = "micropost/README.md"  # Should be some file on your HDFS system
+sc = SparkContext("local", "Simple App")
+logData = sc.textFile(logFile).cache()
+numAs = logData.filter(lambda s: 'a' in s).count()
+numBs = logData.filter(lambda s: 'b' in s).count()
+print "Lines with a: %i, lines with b: %i" % (numAs, numBs)
+
+## Another good example with pandas, .csv and spark
+http://www.nodalpoint.com/spark-data-frames-from-csv-files-handling-headers-column-types/
+
+## TO write to csv:
+df.save('mycsv.csv', 'com.databricks.spark.csv')
+
+## Run ipython notebook with spark profile (for debugging main spark)
+
+ipython notebook --profile=pyspark
+

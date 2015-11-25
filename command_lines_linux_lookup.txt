@@ -1,0 +1,66 @@
+su to move to superuser.
+
+mysql -u root -p password (for remote) 
+
+Install mysql:
+sudo yum install mysql-server
+sudo /sbin/service mysqld start
+
+sudo /usr/bin/mysql_secure_installation
+
+sudo /sbin/service mysqld start
+
+/usr/bin/mysqladmin -u root password 'new-password'
+
+CREATE DATABASE IEQdb;
+
+To import a table into mysql:
+ mysql -u username -p  databasename  < path/example.sql
+
+
+All running processes in linux:
+ps aux | less
+
+## Find processes which are nohup:
+
+nohup python program.py &
+
+OR
+
+nohup python getweather.py </dev/null &>/dev/null &
+
+ps -ef |grep nohup
+
+ps aux | less   #To see all running processes
+
+and kill them (if needed):
+
+http://stackoverflow.com/questions/17385794/how-to-get-the-process-id-to-kill-a-nohup-process
+
+kill -9 1787 787
+#kill UID ??
+
+This one below is simple and works!
+
+kill PID 
+
+
+find -iname "query"
+
+
+For linux:
+sudo yum install -y mongodb-org
+Since it is in SELINUX=enforcing 
+hence use :
+semanage port -a -t mongod_port_t -p tcp 27017
+
+Restart linux: shutdown -r now
+
+FOlder space:
+du --max-depth=1 -h
+ll -h
+
+PATH=$PATH:~/opt/bin
+PATH=~/opt/bin:$PATH
+
+

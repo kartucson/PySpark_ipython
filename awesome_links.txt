@@ -1,0 +1,6 @@
+
+http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
+
+http://arnesund.com/2015/07/13/analyzing-popular-topics-in-my-twitter-timeline-using-apache-spark/
+
+https://github.com/minghui/Twitter-LDA
