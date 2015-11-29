@@ -1,3 +1,4 @@
+https://districtdatalabs.silvrback.com/getting-started-with-spark-in-python?utm_content=bufferd80a3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
 
